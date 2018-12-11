@@ -3,3 +3,21 @@ Jacob Faulk
 j_faulk@u.pacific.edu
 Created on 12/04/2018
 */
+
+@font-face {
+    font-family: "Megalopolis Extra";
+    src: url("fonts/MegalopolisExtra-Regular.eot");
+    src: url("fonts/MegalopolisExtra-Regular.woff2") format("woff2"),
+         url("fonts/MegalopolisExtra-Regular.woff") format("woff");
+}
+
+#title {
+    font-family: "Megopolis Extra", Verdana, Geneva, Tahoma, sans-serif;
+    color: #1da1f2;
+    font-size: 400%;
+}
+
+#description {
+    font-family: "Megopolis Extra", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 150%;
+}
