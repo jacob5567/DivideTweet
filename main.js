@@ -4,12 +4,21 @@ j_faulk@u.pacific.edu
 Created on 12/04/2018
 */
 
+//TODO switch back to min Vue
+
 window.addEventListener("load", function() {
 
     var userInput = new Vue({
         el: "#input",
         data: {
             userTweet: ""
+        }
+    });
+
+    var checkboxes = new Vue({
+        el: "#checkboxes",
+        data: {
+            endingPick: "parentheses"
         }
     });
 
@@ -45,8 +54,22 @@ window.addEventListener("load", function() {
                 }
 
                 if(arrayOfTweets.length > 1) {
-                    for(let j = 0; j < arrayOfTweets.length; j++) {
-                        arrayOfTweets[j] += ' (' + (j + 1) + '/' + arrayOfTweets.length + ')';
+                    switch(checkboxes.$data.endingPick) {
+                        case "slash":
+                            for(let j = 0; j < arrayOfTweets.length; j++) {
+                                arrayOfTweets[j] += ' ' + (j + 1) + '/' + arrayOfTweets.length + '';
+                            }
+                            break;
+                        case "oneValue":
+                            for(let j = 0; j < arrayOfTweets.length; j++) {
+                                arrayOfTweets[j] += ' /' + (j + 1);
+                            }
+                            break;
+                        default:
+                            for(let j = 0; j < arrayOfTweets.length; j++) {
+                                arrayOfTweets[j] += ' (' + (j + 1) + '/' + arrayOfTweets.length + ')';
+                            }
+                            break;
                     }
                 }
 
@@ -58,5 +81,9 @@ window.addEventListener("load", function() {
     userInput.$watch("userTweet", function() {
         results.divide()
     });
+
+    checkboxes.$watch("endingPick", function() {
+        results.divide()
+    })
 
 })
