@@ -26,8 +26,6 @@ window.addEventListener("load", function() {
             dividedTweets: []
         },
         methods: {
-            //TODO fix edge case of no spaces
-            //TODO credit CSS radio button thingy
             divide: function() {
                 let data = userInput.$data.userTweet;
                 data = data.replace(/\n/g, ' ');
@@ -42,16 +40,16 @@ window.addEventListener("load", function() {
                             lastSpace = i;
                         }
                         else {
-                            if(lastSpace != lastI) {
-                                arrayOfTweets.push(data.substring(lastI, lastSpace));
-                                i = lastSpace;
-                            }
-                            else {
-                                arrayOfTweets.push(data.substring(lastSpace, i));
-                                lastSpace = i;
-                            }
+                            arrayOfTweets.push(data.substring(lastI, lastSpace));
+                            i = lastSpace;
                             lastI = i;
                         }
+                    }
+                    else if(i - lastI > 270 && lastSpace == lastI) {
+                        console.log("elseelse");
+                        arrayOfTweets.push(data.substring(lastSpace, i));
+                        lastSpace = i;
+                        lastI = i;
                     }
                     i++;
                 }
