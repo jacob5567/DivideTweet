@@ -7,21 +7,76 @@ Created on 12/04/2018
 @font-face {
     font-family: "Megalopolis Extra";
     src: url("fonts/MegalopolisExtra-Regular.eot");
-    src: url("fonts/MegalopolisExtra-Regular.woff2") format("woff2"),
-         url("fonts/MegalopolisExtra-Regular.woff") format("woff");
+    src: url("fonts/MegalopolisExtra-Regular.woff2") format("woff2"), url("fonts/MegalopolisExtra-Regular.woff") format("woff");
+}
+
+body {
+    background-color: #10171e;
 }
 
 #title {
     font-family: "Megopolis Extra", Verdana, Geneva, Tahoma, sans-serif;
     color: #1da1f2;
     font-size: 350%;
+    text-align: center;
+}
+
+#descriptionDiv {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40%;
 }
 
 #description {
     font-family: "Megopolis Extra", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 125%;
+    text-align: center;
+    color: white;
 }
 
 #inputbox {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 30%;
+    background-color: #10171e;
+    border-radius: 5px;
+    color: white;
+    border-color: #38444d;
+    border-width: 2px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#results {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 40%;
+}
+
+ul {
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: #15202b;
+}
+
+li {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-style: solid;
+    border-color: #38444d;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: #15202b;
+    color: white;
 }
