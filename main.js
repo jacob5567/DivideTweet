@@ -26,6 +26,8 @@ window.addEventListener("load", function() {
             dividedTweets: []
         },
         methods: {
+            //TODO fix edge case of no spaces
+            //TODO credit CSS radio button thingy
             divide: function() {
                 let data = userInput.$data.userTweet;
                 data = data.replace(/\n/g, ' ');

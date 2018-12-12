@@ -113,4 +113,5 @@ li {
     border-width: 2px;
     background-color: #15202b;
     color: white;
+    word-wrap: break-word;
 }
