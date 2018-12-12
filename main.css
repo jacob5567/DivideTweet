@@ -55,7 +55,7 @@ body {
 #checkboxes {
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    /* display: block; */
     /* width: 40%; */
     color: white;
     border: solid 3px #434A51;

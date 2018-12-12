@@ -28,11 +28,13 @@ Created on 12/04/2018
         <textarea id="inputbox" cols="50" rows="10" v-model="userTweet" placeholder="Enter your tweet here!"></textarea>
     </div>
 
-    <div id="checkboxes">
-        <input type="radio" name="ending" id="parethesesID" value="parentheses" checked="checked" v-model="endingPick"><label
-            for="parethesesID">(x/y)</label>
-        <input type="radio" name="ending" id="slashID" value="slash" v-model="endingPick"><label for="slashID">x/y</label>
-        <input type="radio" name="ending" id="oneValueID" value="oneValue" v-model="endingPick"><label for="oneValueID">/x</label>
+    <div style="width: 100%; text-align: center">
+        <div id="checkboxes">
+            <input type="radio" name="ending" id="parethesesID" value="parentheses" checked="checked" v-model="endingPick"><label
+                for="parethesesID">(x/y)</label>
+            <input type="radio" name="ending" id="slashID" value="slash" v-model="endingPick"><label for="slashID">x/y</label>
+            <input type="radio" name="ending" id="oneValueID" value="oneValue" v-model="endingPick"><label for="oneValueID">/x</label>
+        </div>
     </div>
 
     <div id="results">
