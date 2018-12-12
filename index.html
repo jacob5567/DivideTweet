@@ -9,17 +9,58 @@ Created on 12/04/2018
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DivideTweet</title>
+    <title>DivideTweet!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="vue.js"></script>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
 </head>
 
 <body>
 
     <h1 id="title">DivideTweet!</h1>
-    <h2 id="description">Enter your long tweet below, and it will automatically be divided into 280 character slices for you to simply copy, paste and post!</h2>
+    <h2 id="description">Enter your long tweet below, and it will automatically be divided into 280 character slices
+        for you to simply copy, paste and post!</h2>
+
+    <div id="input">
+        <textarea id="inputbox" cols="50" rows="10" v-model="userTweet" placeholder="Enter your tweet here!"></textarea>
+    </div>
+
+    <div id="results">
+        <ul>
+            <li v-for="tweet in dividedTweets">
+                {{ tweet }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        var userInput = new Vue({
+            el: "#input",
+            data: {
+                userTweet: ""
+            }
+        })
+
+        var results = new Vue({
+            el: "#results",
+            data: {
+                dividedTweets: []
+            },
+            methods: {
+                divide: function() {
+                    let data = userInput.$data.userTweet;
+                    
+                    // this.dividedTweets = 
+                }
+            }
+        })
+
+        userInput.$watch("userTweet", function() {
+            results.divide()
+        })
+    </script>
 
 </body>
 

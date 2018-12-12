@@ -14,10 +14,14 @@ Created on 12/04/2018
 #title {
     font-family: "Megopolis Extra", Verdana, Geneva, Tahoma, sans-serif;
     color: #1da1f2;
-    font-size: 400%;
+    font-size: 350%;
 }
 
 #description {
     font-family: "Megopolis Extra", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 150%;
+    font-size: 125%;
+}
+
+#inputbox {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
