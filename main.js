@@ -4,6 +4,8 @@ j_faulk@u.pacific.edu
 Created on 12/04/2018
 */
 
+//TODO switch back to production version of Vue
+
 window.addEventListener("load", function() {
 
     var userInput = new Vue({
@@ -22,6 +24,7 @@ window.addEventListener("load", function() {
             divide: function() {
                 let data = userInput.$data.userTweet;
                 data = data.replace(/\n/g, ' ');
+                data = data.trim();
                 let arrayOfTweets = [];
                 let i = 0;
                 let lastSpace = 0;
@@ -43,8 +46,10 @@ window.addEventListener("load", function() {
                     arrayOfTweets.push(data.substring(lastI, data.length));
                 }
 
-                for(let j = 0; j < arrayOfTweets.length; j++) {
-                    arrayOfTweets[j] += ' (' + (j + 1) + '/' + arrayOfTweets.length + ')';
+                if(arrayOfTweets.length > 1) {
+                    for(let j = 0; j < arrayOfTweets.length; j++) {
+                        arrayOfTweets[j] += ' (' + (j + 1) + '/' + arrayOfTweets.length + ')';
+                    }
                 }
 
                 this.dividedTweets = arrayOfTweets;
