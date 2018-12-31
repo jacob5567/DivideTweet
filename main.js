@@ -4,6 +4,14 @@ j_faulk@u.pacific.edu
 Created on 12/04/2018
 */
 
+//TODO character count?
+//TODO fix mobile css
+//TODO add a variable character count (not just 280)
+//TODO better CSS overall
+//TODO twitter API integration
+//TODO make it work for more than 999 tweets
+//TODO make indents work
+
 window.addEventListener("load", function() {
 
     var userInput = new Vue({
